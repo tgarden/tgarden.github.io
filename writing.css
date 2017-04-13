@@ -1,0 +1,8 @@
+
+h3  { color: black; font-size: 14pt; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: 500; background-color: silver; text-align: left; margin: 1em 0 }
+p   { color: black; font-size: 12pt; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: 400; background-color: white; text-align: justify; text-indent: 12pt }
+table   { color: black; font-size: 12pt; font-family: Verdana, Arial, Helvetica, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; background-color: white; border-color: white; outline-color: white }
+div { color: black; font-style: normal; font-weight: normal; font-stretch: normal; text-decoration: none; background-color: white }
+#listid { color: aqua; background-color: fuchsia }
+.list { color: black; text-align: left }
+h4 { color: navy; font-size: 18pt; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; background-color: silver; margin: 1.33em 0 }

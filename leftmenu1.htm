@@ -1,0 +1,311 @@
+<!--This file created 15/6/00 9:00 pm by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>leftmenu.gif</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+   <X-SAS-WINDOW TOP=51 BOTTOM=561 LEFT=77 RIGHT=607>
+<X-CLARIS-WINDOW TOP=39 BOTTOM=584 LEFT=123 RIGHT=653><X-CLARIS-TAGVIEW MODE=minimal><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><meta name="description" content="Fireworks Splice HTML"><!-- Fireworks 2.0  Generic target.  
+    Created Sun Jul 25 17:58:50 GMT-2300 1999 --><!-------------------- BEGIN COPYING THE JAVASCRIPT SECTION HERE -------------------><script language="JavaScript"><!-- hide this script from non-javascript-enabled browsers
+
+if (document.images) {
+writ_F1 = new Image(140,36); writ_F1.src = "writ.gif";
+writ_F2 = new Image(140,36); writ_F2.src = "writ_F2.gif";
+writ_F3 = new Image(140,36); writ_F3.src = "writ_F3.gif";
+phot_F1 = new Image(140,29); phot_F1.src = "phot.gif";
+phot_F2 = new Image(140,29); phot_F2.src = "phot_F2.gif";
+phot_F3 = new Image(140,29); phot_F3.src = "phot_F3.gif";
+polic_F1 = new Image(140,23); polic_F1.src = "polic.gif";
+polic_F2 = new Image(140,23); polic_F2.src = "polic_F2.gif";
+polic_F3 = new Image(140,23); polic_F3.src = "polic_F3.gif";
+mac_F1 = new Image(140,27); mac_F1.src = "mac.gif";
+mac_F2 = new Image(140,27); mac_F2.src = "mac_F2.gif";
+mac_F3 = new Image(140,27); mac_F3.src = "mac_F3.gif";
+links_F1 = new Image(140,23); links_F1.src = "links.gif";
+links_F2 = new Image(140,23); links_F2.src = "links_F2.gif";
+links_F3 = new Image(140,23); links_F3.src = "links_F3.gif";
+bio_F1 = new Image(140,25); bio_F1.src = "bio.gif";
+bio_F2 = new Image(140,25); bio_F2.src = "bio_F2.gif";
+bio_F3 = new Image(140,25); bio_F3.src = "bio_F3.gif";
+}
+
+/* Function that swaps images. */
+
+function di20(id, newSrc) {
+    var theImage = FWFindImage(document, id, 0);
+    if (theImage) {
+        theImage.src = newSrc;
+    }
+}
+
+/* Functions that track and set toggle group button states. */
+
+function FWFindImage(doc, name, j) {
+    var theImage = false;
+    if (doc.images) {
+        theImage = doc.images[name];
+    }
+    if (theImage) {
+        return theImage;
+    }
+    if (doc.layers) {
+        for (j = 0; j < doc.layers.length; j++) {
+            theImage = FWFindImage(doc.layers[j].document, name, 0);
+            if (theImage) {
+                return (theImage);
+            }
+        }
+    }
+    return (false);
+}
+
+
+function setCookie(name, value) {
+    document.cookie = name + "=" + escape(value);
+}
+
+function getCookie(Name) {
+    var search = Name + "=";
+    var retVal = "";
+    if (document.cookie.length > 0) {
+        offset = document.cookie.indexOf(search);
+        if (offset != -1) {
+            end = document.cookie.indexOf(";", offset);
+            offset += search.length;
+            if (end == -1) {
+                end = document.cookie.length;
+            }
+            retVal = unescape(document.cookie.substring(offset, end));
+        }
+    }
+    return (retVal);
+}
+
+function InitGrp(grp) {
+    var cmd = false;
+    if (getCookie) {
+        cmd = getCookie(grp);
+    }
+    if (cmd) {
+        eval("GrpDown(" + cmd + ")");
+        eval("GrpRestore(" + cmd + ")");
+    }
+}
+
+function FindGroup(grp, imageName) {
+    var img = FWFindImage(document, imageName, 0);
+    if (!img) {
+        return (false);
+    }
+    var docGroup = eval("document.FWG_" + grp);
+    if (!docGroup) {
+        docGroup = new Object();
+        eval("document.FWG_" + grp + " = docGroup");
+        docGroup.theImages = new Array();
+    }
+    if (img) {
+        var i;
+        for (i = 0; i < docGroup.theImages.length; i++) {
+            if (docGroup.theImages[i] == img) {
+                break;
+            }
+        }
+        docGroup.theImages[i] = img;
+        if (!img.atRestSrc) {
+            img.atRestSrc = img.src;
+            img.initialSrc = img.src;
+        }
+    }
+    return (docGroup);
+}
+
+function GrpDown(grp, imageName, downSrc, downOver) {
+    if (!downOver) {
+        downOver = downSrc;
+    }
+    var cmd = "'" + grp + "','" + imageName + "','" + downSrc + "','" + downOver + "'";
+    setCookie(grp, cmd);
+    var docGroup = FindGroup(grp, imageName, false);
+    if (!docGroup || !downSrc) {
+        return;
+    }
+    obj = FWFindImage(document, imageName, 0);
+    var theImages = docGroup.theImages;
+    if (theImages) {
+        for (i = 0; i < theImages.length; i++) {
+            var curImg = theImages[i];
+            if (curImg && curImg != obj) {
+                curImg.atRestSrc = curImg.initialSrc;
+                curImg.isDown = false;
+                obj.downOver = false;
+                curImg.src = curImg.initialSrc;
+            }
+        }
+    }
+    obj.atRestSrc = downSrc;
+    obj.downOver = downOver;
+    obj.src = downOver;
+    obj.isDown = true;
+}
+
+function GrpSwap(grp) {
+    var i, j = 0, newSrc, objName;
+    var docGroup = false;
+    for (i = 1; i < (GrpSwap.arguments.length - 1); i += 2) {
+        objName = GrpSwap.arguments[i];
+        newSrc = GrpSwap.arguments[i + 1];
+        docGroup = FindGroup(grp, objName);
+        if (!docGroup) {
+            continue;
+        }
+        obj = FWFindImage(document, objName, 0);
+        if (!obj) {
+            continue;
+        }
+        if (obj.isDown) {
+            if (obj.downOver) {
+                obj.src = obj.downOver;
+            }
+        } else {
+            obj.src = newSrc;
+            obj.atRestSrc = obj.initialSrc;
+        }
+        obj.skipMe = true;
+        j++;
+    }
+    if (!docGroup) {
+        return;
+    }
+    theImages = docGroup.theImages;
+    if (theImages) {
+        for (i = 0; i < theImages.length; i++) {
+            var curImg = theImages[i];
+            if (curImg.atRestSrc && !curImg.skipMe) {
+                curImg.src = curImg.atRestSrc;
+            }
+            curImg.skipMe = false;
+        }
+    }
+}
+
+function GrpRestore(grp) {
+    var docGroup = eval("document.FWG_" + grp);
+    if (!docGroup) {
+        return;
+    }
+    theImages = docGroup.theImages;
+    if (theImages) {
+        for (i = 0; i < theImages.length; i++) {
+            var curImg = theImages[i];
+            if (curImg.atRestSrc) {
+                curImg.src = curImg.atRestSrc;
+            }
+        }
+    }
+}
+
+// stop hiding --></script><!-------------------------- STOP COPYING THE JAVASCRIPT HERE -------------------------->
+</HEAD>
+<BODY BGCOLOR="#009999" onload="InitGrp('FwSimpleGroup');">
+
+<P><A HREF="homep.html" TARGET="rightside"><IMG SRC="fstitle6.gif"
+WIDTH=158 HEIGHT=105 X-SAS-UseImageWidth X-SAS-UseImageHeight
+BORDER=0 ALIGN=bottom></A></P>
+
+<P><!--The following section is an HTML table which reassembles the sliced image in a browser.--><!--Copy the table section including the opening and closing table tags, and paste the data where--><!--you want the reassembled image to appear in the destination document. --><!-------------------------- BEGIN COPYING THE TABLE HERE ----------------------------><!-- Image with table --><TABLE
+BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=140>
+   <TR>
+      <TD>
+         <P><A HREF="writings/tgworks.html" TARGET="rightside"
+         onmouseout="GrpRestore('FwSimpleGroup');" onmouseover="GrpSwap('FwSimpleGroup','writ','writ_F2.gif');" onclick="GrpDown('FwSimpleGroup','writ','writ_F3.gif','writ_F3.gif');"><IMG
+         SRC="writ.gif" WIDTH=140 HEIGHT=36 BORDER=0 ALIGN=bottom
+         name=writ></A>
+      </TD></TR>
+   <TR>
+      <TD>
+         <P><A HREF="photos/photos.html" TARGET="rightside"
+         onmouseout="GrpRestore('FwSimpleGroup');" onmouseover="GrpSwap('FwSimpleGroup','phot','phot_F2.gif');" onclick="GrpDown('FwSimpleGroup','phot','phot_F3.gif','phot_F3.gif');"><IMG
+         SRC="phot.gif" WIDTH=140 HEIGHT=29 BORDER=0 ALIGN=bottom
+         name=phot></A>
+      </TD></TR>
+   <TR>
+      <TD>
+         <P><A HREF="policy/irlinks.html" TARGET="rightside"
+         onmouseout="GrpRestore('FwSimpleGroup');" onmouseover="GrpSwap('FwSimpleGroup','polic','polic_F2.gif');" onclick="GrpDown('FwSimpleGroup','polic','polic_F3.gif','polic_F3.gif');"><IMG
+         SRC="polic.gif" WIDTH=140 HEIGHT=23 BORDER=0 ALIGN=bottom
+         name=polic></A>
+      </TD></TR>
+   <TR>
+      <TD>
+         <P><A HREF="apple/tgapple.html" TARGET="rightside"
+         onmouseout="GrpRestore('FwSimpleGroup');" onmouseover="GrpSwap('FwSimpleGroup','mac','mac_F2.gif');" onclick="GrpDown('FwSimpleGroup','mac','mac_F3.gif','mac_F3.gif');"><IMG
+         SRC="mac.gif" WIDTH=140 HEIGHT=27 BORDER=0 ALIGN=bottom
+         name=mac></A>
+      </TD></TR>
+   <TR>
+      <TD>
+         <P><A HREF="links/tgcool.html" TARGET="rightside"
+         onmouseout="GrpRestore('FwSimpleGroup');" onmouseover="GrpSwap('FwSimpleGroup','links','links_F2.gif');" onclick="GrpDown('FwSimpleGroup','links','links_F3.gif','links_F3.gif');"><IMG
+         SRC="links.gif" WIDTH=140 HEIGHT=23 BORDER=0 ALIGN=bottom
+         name=links></A>
+      </TD></TR>
+   <TR>
+      <TD>
+         <P><A HREF="biog/tgbio.html" TARGET="rightside"
+         onmouseout="GrpRestore('FwSimpleGroup');" onmouseover="GrpSwap('FwSimpleGroup','bio','bio_F2.gif');" onclick="GrpDown('FwSimpleGroup','bio','bio_F3.gif','bio_F3.gif');"><IMG
+         SRC="bio.gif" WIDTH=140 HEIGHT=25 BORDER=0 ALIGN=bottom
+         name=bio></A>
+      </TD></TR>
+   <TR>
+      <TD VALIGN=bottom align=center HEIGHT=10>
+         <P>
+      </TD></TR>
+   <TR>
+      <TD>
+         <P><CENTER><FONT SIZE="-2"
+         COLOR="#009999"><A HREF="http://z.extreme-dm.com/s/?tag=tgarden"
+         TARGET="_top"><IMG SRC="http://z0.extreme-dm.com/i/"
+         WIDTH=41 HEIGHT=38 BORDER=0 ALIGN=bottom
+         name=im><SCRIPT LANGUAGE=javascript><!--
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   an=navigator.appName;d=document;function
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   pr(){d.write("<img src=\"http://z1.extreme-dm.com",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   "/z/?tag=tgarden&j=y&srw="+srw+"&srb="+srb+"&",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   "rs="+r+"&l="+escape(parent.document.referrer)+"\" height=1 ",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   "width=1>");}srb="na";srw="na";//--></SCRIPT><SCRIPT LANGUAGE="javascript1.2"><!--
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   s=screen;srw=s.width;an!="Netscape"?
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   srb=s.colorDepth:srb=s.pixelDepth;//--></SCRIPT><SCRIPT LANGUAGE=javascript><!--
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   r=41;d.images?r=d.im.width:z=0;pr();//--></SCRIPT><noscript></A></FONT><FONT
+         SIZE="-2" COLOR="#009999"><IMG
+         SRC="http://z1.extreme-dm.com/z/?tag=tgarden&amp;j=n"
+         WIDTH=1 HEIGHT=1 ALIGN=bottom></noscript></FONT></CENTER>
+      </TD></TR>
+   <TR>
+      <TD>
+         <P><CENTER><B><FONT COLOR="#FF9999">Email:</FONT><FONT
+         COLOR="#FF9999"><A HREF="mailto:tg@tgarden.demon.co.uk">Tim
+         Garden</A></FONT></B></CENTER>
+      </TD></TR>
+   <TR>
+      <TD>
+         <ADDRESS><CENTER><B><FONT
+         COLOR="#FF9999"><A HREF="http://www.geocities.com/CapitolHill/2318"
+         TARGET="_blank">US Mirror</A></FONT></B></CENTER></ADDRESS>
+         
+         <ADDRESS><CENTER><B><FONT
+         COLOR="#FF9999"><A HREF="http://www.tgarden.co.uk"
+         TARGET="_blank">UK Mirror</A></FONT></B></CENTER></ADDRESS>
+      </TD></TR>
+   <TR>
+      <TD align=center HEIGHT=25>
+         <P><CENTER><B><FONT COLOR="#FFFFFF">Amended 15 June
+         2000</FONT></B></CENTER>
+      </TD></TR>
+</TABLE><!--   This table was automatically created with Macromedia Fireworks 2.0   --><!--   http://www.macromedia.com   --><!--------------------------- STOP COPYING THE TABLE HERE --------------------------->
+</P>
+
+<P>&nbsp;</P>
+
+<P><CENTER>&nbsp;</CENTER></P>
+
+<P><CENTER>&nbsp;</CENTER></P>
+</BODY>
+</HTML>

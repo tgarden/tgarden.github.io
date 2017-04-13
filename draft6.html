@@ -1,0 +1,574 @@
+<!--This file created 1/8/96 5:53 pm by Claris Home Page version 1.0b1-->
+<HTML>
+<HEAD>
+   <TITLE>Chapter 6</TITLE>
+   <X-SAS-WINDOW TOP=42 BOTTOM=621 LEFT=4 RIGHT=534>
+</HEAD>
+<BODY>
+
+<P ALIGN=CENTER><FONT SIZE=5 COLOR="#00AF00">Chapter 6</FONT></P>
+
+<P ALIGN=CENTER><FONT SIZE=5>Computing Science</FONT></P>
+
+<P ALIGN=CENTER><FONT SIZE=5>&nbsp;</FONT></P>
+
+<P>	Computation has always been an intrinsic part of military
+science.  Among the early requirements were the need for ballistic
+tables, navigational information and  astronomical techniques. Today
+individuals have immense computational power readily available, and
+computers have an impact on all aspects of life. In examining the
+military prospects for future developments in computer science we
+will  chart the  exponential rise in capabilities since the
+application of the transistor, and identify the projects, both
+military and civil, which have powered the developments. </P>
+
+<P>	While the tasks demanded of computational devices range from
+displaying the time on a clock to predicting world wide weather
+patterns, there are a number of common features to all  systems. A
+computer takes in information and instructions, stores this data,
+processes the information according to a set of instructions and then
+feeds out  the processed data. The system may be as apparently simple
+as the pocket calculator.  Here the information is fed in through the
+keyboard as numerical data and mathematical operations. The
+calculator stores the numbers and processes them according to the
+requirements of the mathematical function. It then feeds out the
+numerical result to the display. Or it may be a jet engine fuel
+control system. Here the information will come from many temperature,
+pressure and control sensors. It will be processed according to
+preplanned instructions and the output will be in the form of
+electro-mechanical control of the fuel system.</P>
+
+<P>	The route to the small, powerful, cheap computing device starts
+from the military pressures of the Second World War. In 1944, J.
+Presper Eckert Jr and John W. Mauchly were developing a machine to
+compute artillery tables for the US Army. This machine, the
+Electronic Numerical Integrator and Computer (ENIAC) was completed in
+1945. The machine could complete 5000 additions per second, and could
+do in a day calculations which would take a man 6 years. The major
+drawback was that the sequence of calculations had to be wired in,
+and altering the sequence was therefore a complicated undertaking.
+The computational power would have been of great help to another
+military project. The scientists working on the atomic bomb project
+at Los Alamos were having to complete long and vital calculations
+with mechanical calculators and paper and pencil. One of them, John
+von Neumann saw the possibilities of developing the ENIAC type
+machine so that the sequence of operations could be changed through
+the use of stored instructions instead of rewiring. His ideas were
+not ready in time to help the scientists on the Manhattan Project,
+but it was the catalyst of two military needs which brought the ideas
+together which led to the programmable electronic computer. In a
+paper in 1945 (1), von Neumann described the building blocks for the
+modern computer today. </P>
+
+<P>	Following the war, research continued in the universities and
+the commercial possibilities added impetus to the development work.
+The first large commercially available computer systems appeared in
+1951 in the form of the Ferranti and the Univac models. Since that
+time, power and reliability have increased by many orders of
+magnitude, while cost and size have decreased radically. This has led
+to a proliferation in applications of computing devices greater even
+than the spread of machine tools in the last century.  Today
+computers are found everywhere. The average European home will have
+them in clocks, televisions, heating controls, cookers, washing
+machines, toys, cars, typewriters and video recorders, as well as the
+more obvious calculators and personal computers. How has a machine
+like ENIAC(2), with some 19000 valves, 1500 relays, hundreds of
+thousands of resistors, capacitors and inductors, housed in a large
+air-conditioned room, and consuming 200 kilowatts of electricity been
+reduced to the size of a pack of cards, able to run off a torch
+battery, and all for the price of a book? </P>
+
+<P>	Looking first at the most obvious reason, there have been two
+developments in electronics which have led to significant
+miniaturisation. The early electronic computers depended on
+thermionic valves, which were inherently bulky, power intensive and
+unreliable. The invention in 1948 of the transistor, a solid state
+switching and amplifying device, offered a much smaller component
+which needed no power to run heated filaments. Difficulty in
+developing reliable mass production techniques, and perhaps also a
+lack of foresight on either military or civil users, meant that it
+was 1963 before the first transistor desk calculator was in
+production. By this time the pressures of space technology and the
+missile developments were generating much more interest in
+miniaturisation of electronic components in general and computers in
+particular. Individual component size reduced, and the use of printed
+circuit boards reduced circuit sizes somewhat. From there the idea of
+etching the transistor, or more than one, with its associated
+components, on to single pieces of suitably treated semiconductor was
+developed. The integrated circuit became the successor to the
+transistor. The driving force of the missile and satellite programmes
+ increased the packing density of components. Since 1959 the number
+of elements contained in each integrated circuit has doubled
+annually. Once the power, reliability and widespread application of
+these devices became apparent, commercial development led to mass
+production techniques and reduced costs. The production techniques
+have been further improved by computer aided design: the power of the
+modern computer is harnessed to make even more powerful computers.
+</P>
+
+<P>Can these trends of greater component density at less cost
+continue for ever? There are a number of physical limitations.
+Individual component size is now down to fractions of a micron. That
+is a size of the order of the wavelength of light. It is not
+therefore possible to use light to 'draw' the components. X-rays or
+electron beams provide the shorter wavelengths necessary to focus and
+draw such fine detail. The packing density will therefore be limited
+by the technology available to manufacture the integrated circuits.
+As the system moves into the high energy physics regime costs may
+begin to rise. Another concern is that as size of components decrease
+to atomic like dimensions, quantum effects become significant, and
+the predictability of operations may decrease. In one analysis of the
+fundamental physical limits of computation (3) the authors assert
+that the uncertainty principle need not theoretically constrain
+computer capability. Other constraints arrive as numbers of
+components increase. The time that information takes to travel is
+limited by the speed of light, and processing time is also a limiting
+factor. We shall examine potentially useful techniques for increasing
+power per unit volume later in this chapter. </P>
+
+<P>The advances in integrated circuits have allowed the production of
+the computer on a chip. All the components necessary to accept input
+of data and instructions, a store for the information, a processing
+unit and an output of the processed information are etched into a
+single piece of silicon. The storage of data has seen a similarly
+spectacular decrease in size. Early computers depended on punched
+cards or paper tapes for the input of data, and bulky delay lines or
+magnetic drums for temporary storage of data within the computer.
+These gave way in the 60s to magnetic tape input and output of data,
+with the computers using magnetic core memory for its internal
+operations. The drawbacks of the sequential nature of data stored on
+tape have since been overcome by the use of magnetic disc systems
+which can be accessed at any point. Internal memory has been taken
+over by integrated circuits giving large arrays of switches. We have
+moved from the punched card which could hold 80 bytes of information
+to the hard disc which can hold several 1000 million bytes. For
+internal memory the delay line of the early computers was some 5 foot
+long and could hold around 1000 bits with an access time measured in
+milliseconds. Today the solid state Random Access Memory can hold 64
+million bits on a chip  measuring less than an inch square, with an
+access time of a fraction of a microsecond. </P>
+
+<P>	The most powerful computers are designed to minimise the time
+taken for signals to travel within the machine, and speed of
+operation is measured in megaflops. A megaflop is one million
+floating point operations per second.  The speed at which the signal
+pulses travel through the wires connecting the various components of
+the computer is of the order of 15 cm per nanosecond. Despite the
+advances in miniaturisation through the development of Ultra Large
+Scale Integration (USLI: the manufacture of over 1 million components
+on a single chip), a powerful computer needs large amounts of memory.
+While individual integrated circuits can be designed with cycle times
+of one nanosecond, the physical size of single processor
+super-computers increases the minimum cycle time for the machine to
+more than 10 nanoseconds. (4). To make further progress in improving
+speed of operation, the inter-component distances need to be reduced
+to a configuration where operations are not constrained by the time
+it takes for the signals to travel. Not only does this present severe
+manufacturing difficulties, the problem of heat dissipation becomes
+critical.  </P>
+
+<P>&nbsp;</P>
+
+<P>There is however a different approach to the problem. One
+technique has been the use of many processors connected in such a way
+that they work simultaneously on a problem with their own dedicated
+memory. One such working parallel computer using 65,536 simple
+parallel processors averages about 2,500 megaflops (5). Theoretically
+such a design system could be used to produce a computer with a
+thousand million parallel processors. Using current technology it
+would be as large as a building, cost 20 times as much as the largest
+commercial computer, but be able to carry out 100 million million
+instructions per second. Such a system requires quite different
+approaches to problem solving, so that the operations can be
+processed in parallel rather than sequentially (6). This may be the
+limiting area, and the research on software development may become
+more critical than novelty in the computer hardware.  The commercial
+supercomputer of 1996 uses a limited number of complex parallel
+processors. With this technique, the Cray J932 using 32 processors
+achieves 6400 Megaflops. It weighs 1400 lbs, needs 12 square feet of
+floor space and uses 8 kW of power. (7).</P>
+
+<P>It may be that the semiconductor junction which has held sway
+since the transistor has run its course, as the thermionic valve did
+before it. There are those who argue that it will remain the
+preferred method for some time to come given the advantages of its
+high gain ratio (7a). However, different switch devices are already
+available. The Josephson junction depends on quantum-mechanical
+effects displayed by thin insulating layers at temperatures near
+absolute zero. A junction can be arranged which is superconducting
+until a magnetic field is applied when it switches to being
+resistive. The switching time between the two states can be as low as
+6 picoseconds (6x10  secs), and the power consumption is very small.
+A superconducting computer with an overall cycle time of two
+nanoseconds could be constructed in a two inch cube.(8). Another
+switch offering low power consumption, high speed and high component
+density is the photonic switch. The Self Electro-optic Effect Devices
+or SEEDs are activated by the arrival of a photon of light, which
+generates a voltage, which in turn changes the light transmission
+characteristics of the SEED. Current technology can manufacture a
+SEED of 2500 alternating layers of gallium arsenide and gallium
+aluminium arsenide with supporting circuitry all within a thickness
+of six thousandth of a millimetre.(9). Advances using this type of
+device are particularly promising for the parallel processing of
+data, which can enter from the top of the chip and emerge at the
+bottom, rather than the more conventional sequential processing
+systems.</P>
+
+<P>	While there is still room for development through the
+utilisation of electronic switching processes, the capacity of the
+human brain suggests that the most productive long term research will
+be in the field of biochemical computers. The brain is still poorly
+understood but appears to be able to cram at least 10  junctions into
+a box the size of the skull. The processing system is parallel,
+redundant and self manufacturing. It would be surprising if the
+chemical and electrical connections of the brain had no lessons to
+offer to the computer scientist. Research is already well underway
+into electronic simulations of the brain's neural network (10).  Such
+systems are already ale to carry out collective decision computing.
+</P>
+
+<P>	Computers of whatever power remain useless boxes until they are
+instructed how to process information. The earliest machines were
+wired up so that the operations required were carried out in the
+necessary order. The development of variable instructions as part of
+the input data allowed the development of modern computers.
+Originally these instructions had to be laboriously written to tell
+the computer in detail each step required. Thus if numbers were to be
+added they would have to be converted into the binary system, stored
+at specified locations in the computer memory, brought into the
+central processing unit to be added one by one, and the result sent
+to another memory location. To ease this task, operations which were
+used repeatedly were stored for quick access, and the computer could
+translate a single mnemonic into the necessary sequence of
+instructions. Different applications called on different routines and
+so a range of computer languages has developed.  The problem of the
+development has been to make it as easy as possible to give the
+computer instructions, while at the same time making them both
+correct and unambiguous.  Machine-dependent languages are different
+for every processor and are totally specific. However they are
+difficult to trace errors in, and take a long time to write. General
+purpose higher level languages like BASIC, Pascal, C, FORTRAN, and
+COBOL were easier  to use but could lack rigorous checking systems to
+ensure that the machine is correctly instructed.  What is still
+required is a programming system with universal application, which is
+standard between the whole range of computing devices, does not use
+up the machine's processing capability in translating the
+instructions, has the ability to detect errors, and allows programs
+to be easily understood and modified. </P>
+
+<P>	The advantages of such work on standardisation  led to the
+adoption of ADA by the US armed forces as their preferred language.
+However languages currently require specialist training for the
+giving of instructions to computers. The tendency has been to make
+the job of the operator as easy as possible. As computing power has
+increased it has been possible to make available capacity for the
+computer to guide the operator through the instruction process. For
+the future, the realms of artificial intelligence seem to offer the
+greatest potential for new programming arrangements exploiting the
+capabilities of the greater computational power. </P>
+
+<P>The definition of artificial intelligence remains a somewhat
+emotive issue. As the capabilities of computers have expanded the
+definition of intelligence has been pushed back further and further,
+until it appears that it becomes defined as that process of reasoning
+which is beyond the capability of current machines. Current research
+focuses on the nature of consciousness. The first computers were
+configured for a particular process. The development of programming
+languages allowed machines to be used for many applications through
+different programs. More recently the operator has been able to
+instruct the machine more generally about problems, and it has
+generated the program to cover the task. Programs which allow a
+machine to learn by experience and modify the program accordingly are
+already in current usage. In the same way computers can operate on
+incomplete data and make a best guess. The increases in computer
+power and speed allow these abilities to be improved, and hence the
+machine becomes more intelligent. The design of the program is also a
+vital part of this process. Brute force analysis of problems limits
+the size of the problem which can be solved. If chess playing
+computers attempted to examine every possible move and counter move
+they would have to consider of the order of 10 possibilities.
+Successful chess players, both human and computer, reduce the number
+of possibilities they examine by looking at 'promising' options. The
+rules which guide the computer to select a manageable number of
+options determine the intelligence of its game. If those rules can be
+modified by experience by the computer then it can improve its
+performance further. Such systems already exist, and the developments
+of techniques to improve intelligence is a major area for further
+research. (11).</P>
+
+<P>One relatively recent computer development, the Internet, is an
+interesting example of  military research, which was subsequently
+extended and improved by civil users, and then taken back into
+military use for different purposes. In the 1960's, the United States
+Department of Defence funded a range of research activities through
+the Advanced Research Projects Agency (ARPA). To connect the
+computers at a number of research sites, and reduce costs, ARPAnet
+was developed. In 1969, the importance of data connectivity in war
+was becoming apparent, and the ARPAnet was used as the research
+vehicle for developing resilience in computer networks. The aim was
+to provide systems which could route around those sites lost in a
+nuclear exchange. The system which was developed was to send data in
+packets which were automatically routed around the shortest available
+route between sending and receiving site. </P>
+
+<P>University research sites were also connected to this network
+where they had military related research projects. The
+interconnections grew as the academic and military users realised the
+usefulness of being able to link around the world through commercial
+telecommunication links. By the early 1980's the system had grown to
+such an extent that the US military decided that there were too many
+other users connected, and they divided the network into two parts: a
+dedicated military network and the old ARPAnet for research sites.
+The two systems were however linked, and other smaller networks began
+joining through gateways. As the advantages became more apparent to
+purely civil computer users, new networks were developed. Those which
+used the Internet Protocol (IP) that had been developed for military
+use flourished because of the ease of connection. In 1986, five
+supercomputers in the United States were linked in the National
+Science Foundation Network (NSFNET). They started by building on the
+ARPANet, but the following year they broke away and gave the
+development to the commercial and purely academic world. The NSFNET
+grew as it offered access to any institution, and in March 1990,
+ARPANet closed down. Schools began to connect to the network and this
+was followed by individuals and businesses. (12).  </P>
+
+<P>Public awareness of the Internet grew enormously through 1995 as
+modem speeds increased and costs decreased. The difficulties of
+navigating this network of millions of computers were eased by the
+rapid development of easy to use software using hypertext links to
+move around the World Wide Web. The nuclear war data communication
+system had become a worldwide information system for every
+individual. Its resilience has had other profound effects.
+Governments can no longer easily control information. A dissident can
+write in one country and be read anywhere in the world. Cutting off
+nodes in the system has no long term effect: the data packets will
+re-route as necessary. </P>
+
+<P>The growth of the Internet is a sobering case study for the
+futurologist. The technology, sponsored by military funds,  has
+existed for 30 years, it was well known in scientific research
+circles, and it was in daily use. Yet there was no expectation of the
+exponential growth in the last 5 years. This growth stemmed from the
+combined effect of mass market personal computers, fast cheap modems,
+and easy to use software. We are seeing new global information
+relationships established, which coupled with global economic
+activity, will have very significant implications for the role of the
+state in the future. The ability to exchange data with any computer
+system in the world has profound security implications. Information
+warfare will require new defensive and offensive techniques.</P>
+
+<P>&nbsp;</P>
+
+<P>Already the computer is an essential component of every aspect of
+war. From the digital clock in the terrorist bomb to the
+supercomputer simulating the nuclear explosion in a new warhead,
+modern warfare depends on computer devices. For the gathering of
+intelligence, computers can assess information, compare multiple
+sources, analyse it and present it in time for it to be of use.
+Computer guidance of weapon systems allows navigation systems to work
+to accuracy measured in centimetres over ranges measured in thousands
+of kilometres. No longer is accuracy a function of range. In
+communication systems, computers have brought security through
+encryption. We will discuss the question of codes more deeply in
+Chapter 14.  In military aircraft computer control allows designs
+that are inherently unstable and thus offer great agility in combat.
+Artillery computers can control army firepower. At sea, the ship's
+captain can fight from deep within his vessel using computer
+generated information from all his sensors. Under the sea, the
+strategic submarine depends on computers to run the nuclear power
+system, and each missile must be linked into the navigational
+computer.  When the missile is fired the on-board computer will
+control its flight path to strike its target. In the cruise missile,
+the computer is able to compare the ground over which the missile is
+flying with its expected contours, and update the navigational
+information accordingly. The list could go on endlessly. There is no
+doubt that computers are important to military technology. The
+question for the future is what areas of research in this field will
+have the greatest potential to improve military capability, what
+vulnerabilities result from the universal application of computers,
+and how can such vulnerabilities be exploited?</P>
+
+<P>	The advent of more powerful systems will be particularly
+important in the acquisition, analysis and dissemination of timely
+information. Today the cycle time for reconnaissance, analysis,
+mission tasking and execution is measured in hours, whether one
+considers space based sensor systems, aircraft or even foot patrols.
+The ability to datalink various sensor systems through a powerful
+computer, and retransmit the analysed information to the firepower
+system in a timely way is one of the most urgent requirements. Such
+technology, while complex, is designed to ease the decision making
+problem of the soldier. If he has a hand held air defence missile, he
+does not wish to know the speed, temperature, altitude, radar shape,
+exhaust characteristics, or heading of the aircraft in his sight. He
+does not need to know the larger airspace management picture, and how
+his target fits into it. The computer can look at all the evidence
+from many sources and determine the probability of the target being
+an enemy aircraft. For the soldier in the field, his display need be
+no more than a green or red light to indicate friend or foe. Computer
+power and artificial intelligence have much to offer in this area.
+</P>
+
+<P>	Weapons have become more accurate and effective as sensor
+systems have become small enough to include in the weapon. As the
+computer power that can be included in a missile increases so the
+weapon needs to depend less on the human operator. It is sometimes
+suggested that this offers the prospect of the automated battlefield.
+At its most dramatic, this automation was assumed in the nuclear
+deterrence posture of launch on warning. Concerns over the
+possibility of losing retaliatory capability to a pre-emptive
+strategic attack led to the suggestion that missiles could be
+launched when a massive attack was detected, but before the enemy
+missiles arrived at their targets. The short time of flight of
+ballistic missiles mean that such a system would require computer
+analysis of the sensor data indicating a massive enemy launch of
+offensive missiles. If the analysis confirmed such an attack then the
+computer would activate the retaliatory strike. Such a Doomsday
+Machine was always unlikely to find favour whatever the improvements
+in sensor technology, computer power and machine reliability. But is
+it possible than an analogous automatic system could be used on the
+conventional battlefield? One can conceive of an intelligent
+reconnaissance drone searching an area for enemy tanks, activating a
+surface to surface missile with multiple terminally guided munitions,
+and hence destroying the tanks. The drone would carry-out the post
+attack analysis and decide whether further attack was necessary. The
+possibilities of such systems would depend crucially on the
+computer's ability to recognise decoy schemes and counter them. The
+predictability of the system which lacks human intervention is
+currently a great weakness. Nevertheless, this type of warfare may
+become possible, and research will certainly be important.</P>
+
+<P>	Moving from the use of computers for the tactical battle to
+their application at the strategic and policy level,  wargaming on
+computers is already an important tool for both planning and
+training. If the most powerful supercomputers can model the workings
+of the Earth's atmosphere, will they not also be able to predict the
+right strategy and tactics to win wars? Here the prospects seem less
+certain. The difficulties of modelling human qualities, political
+will, public opinion and the many subjective factors which affect the
+outcome of a conflict, make the prospects for computer prediction
+rather less likely than accurate economic forecasting. As a training
+aid in war, from the individual simulator for a soldier operating an
+anti-tank missile, through the  air-to-air combat simulator, to the
+full command and control war simulator, increasing computing power is
+important. </P>
+
+<P>	The very usefulness of the computer brings with it the penalty
+of dependence. The fineness of the component integrated circuits make
+them sensitive to their environment. In particular excess voltages
+can destroy the circuitry efficiently. Of particular concern is the
+electromagnetic pulse (EMP) which accompanies any nuclear explosion.
+During the Cold War, military electronics were routinely, but at
+considerable expense, protected against possible EMP levels.
+Administrative systems and civilian computers were never afforded
+such protection. Yet the destruction of such systems would have a
+crucial effect on how well a modern nation could survive. Both the
+military machine and the civilian community have moved  towards a
+total dependence on complex computer systems. This suggests that a
+productive line of research may be in anti-computer weapons and their
+counter defences. Attacks on computer systems can be against the
+hardware, the software or the data. All are vulnerable.</P>
+
+<P>Hardware attacks can use old or new weapon systems. The terrorist
+bomb placed in the commercial centre of a city can have severe
+economic effects if computer systems are not protected, and data
+backed up and removed to remote locations. At the high technology end
+of the spectrum, it may be that directed energy weapons will provide
+a method of destroying integrated circuits unless critical system
+processors are appropriately protected.</P>
+
+<P>The public is already aware of the vulnerability of systems to
+attack through software. Every computer user has experienced the
+unexplained system crash caused by errors in software. These 'bugs'
+are inevitable as software becomes more complex. For critical weapon
+and safety systems, assurance of low risk of errors comes at a high
+price. Research into techniques for software testing can pay high
+dividends. Software can also be attacked. Computer viruses are
+instructions for computers to carry out some task which the user had
+not intended. They come in many forms and may harmlessly display a
+message saying "Merry Christmas" each year, or alternatively may
+delete all the data and program files within a networked system. To
+sabotage a computer system through a virus requires the unfriendly
+sequence of code to be introduced into the system. This can be done
+when loading a programme, when entering data, when exchanging data
+over a network (either internal or external), or when manufacturing
+the components of the system. The attacker may be a disgruntled
+employee working on site, or an unfriendly state on the other side of
+the globe attacking through the internet. Protective firewalls to
+prevent unauthorised access are a first defence. Accepting the
+drawbacks of lack of connectivity is also a defensive measure for key
+systems. Supervision of all computer related activity is also vital.
+Nevertheless, there remain real vulnerabilities. The development of
+critical weapon systems requires particular attention. Specialist
+chips will come from many sources, and an integrated circuit
+containing 10 million transistors could hide a piece of code which
+might render the system vulnerable.</P>
+
+<P>	The final question to be considered is the division of effort
+in computer research. The military needs have been important in the
+history of computer development so far. Commercial exploitation has
+followed and reduced unit costs. Pure research in mathematics,
+physics, biochemistry and computer science is likely to produce
+useful progress with applications to the military. There will however
+remain the specialised needs of the military fields, which will
+require specific defence research and development. The area to give
+the greatest return will be in exploiting an enemy's reliance on
+computers, and countering our own vulnerabilities.</P>
+
+<P>NOTES ON CHAPTER 6</P>
+
+<P>1. The Penguin Computing Book by S.Curran and R Curnow, Penguin,
+London 1983 p 83.</P>
+
+<P>2. 'Computers' by S.M.Ulam in Scientific American, September 1964,
+pp203-6</P>
+
+<P>3. 'The Fundamental Physical Limitations of Computation' by C H
+Bennett &amp; R Landauer in Scientific American July 1985 p45.</P>
+
+<P>4. 'Supercomputers' by R.D.Levine in Scientific American January
+1982 pp 112-124.</P>
+
+<P>5.  'The Connection Machine' by W.D.Hillis in Scientific American
+June 1987, pp86-93.</P>
+
+<P>6.  For a discussion of the approaches to parallel processing see
+'Advanced Computer Architectures' by G.C.Fox and P.C.Messina in
+Scientific American October 1987.</P>
+
+<P>7. 'The CRAY J90 Series'  information sheet from Cray World Wide
+Web page May 1996.</P>
+
+<P>7a. 'The Future of the Transistor' by R.W.Keyes in The Computer in
+the 21st Century. 1995 published by Scientific American. pp 90-95
+</P>
+
+<P>8. 'The Superconducting Computer' by J Matisoo in Scientific
+American May 1980 pp38-53</P>
+
+<P>9. 'Tripping the Light Fantastic' in Scientific American August
+1986 pp57B-58.</P>
+
+<P>10.  'Collective Computation in Neuronlike Circuits' by D.W.Tank
+&amp; J.J.Hopfield, in Scientific American December 1987, pp62-70.
+</P>
+
+<P>11. 'Computer Software for Intelligent Systems' by D.B.Lenat in
+Scientific American September 1984 pp152-160.</P>
+
+<P>12. A description of the development of the internet appears in
+the opening section of 'The Internet Starter Kit' by A.C.Engst -
+Hayden Books 1993.</P>
+
+<P><HR></P>
+
+<UL>
+   <LI><A HREF="draft7.html">Go to Chapter 7</A>
+   
+   <LI><A HREF="draft5.html">Go to Chapter 5</A>
+   
+   <LI><A HREF="index.html">Go to Home Page</A>
+   
+   <P>&nbsp;</P>
+</UL>
+</BODY>
+</HTML>

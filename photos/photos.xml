@@ -1,0 +1,191 @@
+<gallery
+base = ""
+background = "#000000"
+banner = "#996666"
+text = "#FFFFCC"
+link = "#0000FF"
+alink = "#FF0000"
+vlink = "#800080"
+date = "19/2/06">
+	<sitename> Photos</sitename>
+	<photographer>Tim Garden</photographer>
+	<contactinfo></contactinfo>
+	<email></email>
+	<security><![CDATA[]]> </security>
+
+<banner font = "Helvetica" fontsize = "3" color =  "#996666"> </banner>
+<thumbnail base ="thumbnails/" font = "Helvetica" fontsize = "4" color = "#996666" border = "0" rows = "3" col = "5"> </thumbnail> 
+<large base ="images/" font = "Helvetica" fontsize = "3" color = "#996666" border = "0"> </large>
+<images id = "images">
+
+<image
+path = "Budapest.jpg"
+width = "367"
+height = "500"
+thumbpath = "Budapest.jpg"
+thumbwidth = "55"
+thumbheight = "75">
+</image>
+
+
+<image
+path = "Chinook.jpg"
+width = "500"
+height = "302"
+thumbpath = "Chinook.jpg"
+thumbwidth = "75"
+thumbheight = "45">
+</image>
+
+
+<image
+path = "Colmado.jpg"
+width = "500"
+height = "332"
+thumbpath = "Colmado.jpg"
+thumbwidth = "75"
+thumbheight = "49">
+</image>
+
+
+<image
+path = "DSCF0747.jpg"
+width = "500"
+height = "375"
+thumbpath = "DSCF0747.jpg"
+thumbwidth = "75"
+thumbheight = "56">
+</image>
+
+
+<image
+path = "GooseDawn.jpg"
+width = "500"
+height = "307"
+thumbpath = "GooseDawn.jpg"
+thumbwidth = "75"
+thumbheight = "46">
+</image>
+
+
+<image
+path = "Owl.jpg"
+width = "500"
+height = "467"
+thumbpath = "Owl.jpg"
+thumbwidth = "75"
+thumbheight = "70">
+</image>
+
+
+<image
+path = "Steam.jpg"
+width = "500"
+height = "271"
+thumbpath = "Steam.jpg"
+thumbwidth = "75"
+thumbheight = "40">
+</image>
+
+
+<image
+path = "Sydney.jpg"
+width = "500"
+height = "446"
+thumbpath = "Sydney.jpg"
+thumbwidth = "75"
+thumbheight = "67">
+</image>
+
+
+<image
+path = "fisherman.jpg"
+width = "500"
+height = "451"
+thumbpath = "fisherman.jpg"
+thumbwidth = "75"
+thumbheight = "67">
+</image>
+
+
+<image
+path = "hispot.jpg"
+width = "500"
+height = "398"
+thumbpath = "hispot.jpg"
+thumbwidth = "75"
+thumbheight = "59">
+</image>
+
+
+<image
+path = "hotair.jpg"
+width = "363"
+height = "500"
+thumbpath = "hotair.jpg"
+thumbwidth = "54"
+thumbheight = "75">
+</image>
+
+
+<image
+path = "koala.jpg"
+width = "417"
+height = "500"
+thumbpath = "koala.jpg"
+thumbwidth = "62"
+thumbheight = "75">
+</image>
+
+
+<image
+path = "pharoah.jpg"
+width = "300"
+height = "500"
+thumbpath = "pharoah.jpg"
+thumbwidth = "45"
+thumbheight = "75">
+</image>
+
+
+<image
+path = "steamtrain.jpg"
+width = "500"
+height = "375"
+thumbpath = "steamtrain.jpg"
+thumbwidth = "75"
+thumbheight = "56">
+</image>
+
+
+<image
+path = "surfer.jpg"
+width = "500"
+height = "261"
+thumbpath = "surfer.jpg"
+thumbwidth = "75"
+thumbheight = "39">
+</image>
+
+
+<image
+path = "tiber.jpg"
+width = "500"
+height = "340"
+thumbpath = "tiber.jpg"
+thumbwidth = "75"
+thumbheight = "51">
+</image>
+
+
+<image
+path = "wheel8.jpg"
+width = "500"
+height = "400"
+thumbpath = "wheel8.jpg"
+thumbwidth = "75"
+thumbheight = "60">
+</image>
+
+</images>
+</gallery>
